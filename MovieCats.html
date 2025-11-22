@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X DVD CLUB</title>
+    <link rel="stylesheet" href="okayss.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">X DVD CLUB</a></li>
+            <li><a href="MovieCats.html">Movie Categories</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- FIXED: container is now correctly opened and closed -->
+    <div id="container">
+
+        <h1 id="title">Movie Categories</h1>
+
+        <a href="ACT.html">
+            <button class="category-button">ACT</button>
+        </a>
+
+        <a href="ANM.html">
+            <button class="category-button">ANM</button>
+        </a>
+
+        <a href="BIO.html">
+            <button class="category-button">BIO</button>
+        </a>
+
+        <a href="HOR.html">
+            <button class="category-button">HOR</button>
+        </a>
+
+        <a href="SCF.html">
+            <button class="category-button">SCF</button>
+        </a>
+
+    </div> 
+
+    <style>
+       #container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    width: 100%;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.category-button {
+    padding: 25px;
+    font-size: 80px;
+    background-color: red;
+    color: whitesmoke;
+    border: 1px solid whitesmoke;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 260px;
+    justify-self: center;
+}
+
+.category-button:hover {
+    background-color: darkred;
+}
+
+.category-button:active {
+    background-color: whitesmoke;
+    color: darkred;
+}
+
+#title {
+    grid-column: 1 / -1;
+    font-size: 60px;
+    margin-bottom: 40px;
+    color:antiquewhite;
+}
+
+/* --- CENTER BOTTOM TWO BUTTONS --- */
+
+/* 4th button (HOR): center bottom row, left position */
+#container a:nth-of-type(4) {
+    grid-column: 1;
+}
+
+/* 5th button (SCF): center bottom row, right position */
+#container a:nth-of-type(5) {
+    grid-column: 3;
+}
+
+
+    </style>
+</body>
+</html>

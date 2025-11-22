@@ -1,0 +1,176 @@
+/*global style reset */
+*{
+    margin: 0;
+    padding: 0;
+}
+/*style for body */
+body{
+    min-height: 100vh;
+    background-color:#0f3a6c;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+/*style for nav */
+nav{
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255,);
+
+    /* Glassmorphism Effect */
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1001;
+    
+}
+/*style for nav unordered list */
+nav ul{
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+
+}
+/*style for nav list items */
+nav li{
+    height: 50px;
+}
+/*style for nav links */
+nav a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+/*hover effect for nav links */
+nav a:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/*style for first nav list item to align left */
+nav li:first-child {
+    margin-right: auto;
+}
+
+/*style for carousel */
+.carousel {
+    width: 100%;
+    overflow: hidden;
+    background-color: red;
+    border:5px solid rgb(225, 255, 225, 0.1);
+    margin-top: 51px;
+    position: fixed;
+    text-align: center;
+    z-index: 1000;
+    
+}
+/*style for group inside carousel */
+.group {
+    display: flex;
+    animation: spin 15s linear infinite;
+    white-space: nowrap;
+    padding-right: 1em;
+    gap: 1em;
+     
+}
+/*style for each card inside group */
+.card {
+    padding: 1rem;
+    
+}
+/*style for links inside cards */
+#card a{
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/*animation for spinning effect */
+@keyframes spin{
+    from {transform: translateX(100%);}
+    to {transform: translateX(-132%);}
+}
+
+/* point of no return */
+
+/* Section title style */
+.section-title {
+        padding-top: 150px;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 100px;
+        font-weight: bold;
+        color: #e6a842;  
+    }
+
+    /* Grid container style */
+    .dvd-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(205px, 1fr));
+        gap: 20px;
+        padding: 20px;
+        margin-top: 20px;
+        max-width: 82%;
+        margin-left: 90px;
+    }
+    /* Individual DVD item style */
+    .dvd-item {
+        background-color:#eaeaea;
+        padding: 10px;
+        border-radius: 8px;
+        text-align: center;
+        margin-top: 20px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+
+        
+    }
+    /* Hover effect for DVD items */
+    .dvd-item:hover {
+        transform: scale(1.10);
+        transition: transform 0.3s;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        text-decoration: color(red);
+        z-index: 2;
+    }
+
+    .dvd-item img {
+        width: 100%;
+        height: 92.9%;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-top: 10px;
+    }
+    
+    .dvd-title {
+        font-weight: bold;
+        font-size: 14px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: deeppink;
+        text-decoration: underline;
+        /*rember to change color later*/
+        margin-top: -5px;
+        z-index: 1;
+    }
+
+    .quick-view {
+        margin-top: 6px;
+        color: #c40000;
+        font-weight: bold;
+        cursor: pointer;
+        font-size: 13px;
+    }
